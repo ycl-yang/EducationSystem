@@ -16,6 +16,7 @@ namespace EducationManagementSystem
         public frm_SignUp()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btn_SignUp_Click(object sender, EventArgs e)

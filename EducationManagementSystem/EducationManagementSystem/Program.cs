@@ -16,7 +16,9 @@ namespace EducationManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_SignUp());
+            frm_LogIn logInForm = new frm_LogIn();
+            logInForm.Show();
+            Application.Run();
         }
     }
 }

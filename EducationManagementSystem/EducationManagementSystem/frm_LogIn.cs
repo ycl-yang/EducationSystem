@@ -16,6 +16,7 @@ namespace EducationManagementSystem
         public frm_LogIn()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btn_LogIn_Click(object sender, EventArgs e)
@@ -28,7 +29,10 @@ namespace EducationManagementSystem
             int result = sqlHelper.QuickReturn<int>(commandText);
             if (result == 1)
             {
-                MessageBox.Show("登录成功。");
+                MessageBox.Show("登录成功！");
+                frm_EducationManagement frm_EducationManagement = new frm_EducationManagement(this.txt_StudentNo.Text.Trim());
+                frm_EducationManagement.Show();
+                this.Close();
             }
             else
             {
